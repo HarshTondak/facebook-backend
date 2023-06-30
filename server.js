@@ -46,7 +46,7 @@ mongoose
   .then(() => console.log("database connected successfully"))
   .catch((err) => console.log("Error found", err));
 
-const PORT = process.env.REACT_APP_PORT || 8000;
+const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
   console.log(`server is running on port ${PORT}`);
 });

@@ -11,18 +11,6 @@ exports.createPost = async (req, res) => {
   }
 };
 
-// exports.getAllPosts = async (req, res) => {
-//   try {
-//     const posts = await Post.find()
-//       .populate("user", "first_name last_name picture username gender")
-//       .populate("comments.commentBy", "first_name last_name picture username")
-//       .sort({ createdAt: -1 });
-//     res.json(posts);
-//   } catch (error) {
-//     return res.status(500).json({ message: error.message });
-//   }
-// };
-
 exports.getAllPosts = async (req, res) => {
   try {
     const followingTemp = await User.findById(req.user.id).select("following");

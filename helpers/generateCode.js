@@ -1,3 +1,4 @@
+// Generate random codes of given length
 function generateCode(length) {
   let code = "";
   let schema = "0123456789";
@@ -5,7 +6,6 @@ function generateCode(length) {
   for (let i = 0; i < length; i++) {
     code += schema.charAt(Math.floor(Math.random() * schema.length));
   }
-
   return code;
 }
 

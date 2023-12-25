@@ -34,6 +34,7 @@ app.use(cors());
 // To upload images
 app.use(
   fileUpload({
+    // Store files in a temporary storage(tmp folder)
     useTempFiles: true,
   })
 );

@@ -1,7 +1,10 @@
 const express = require("express");
 const { uploadImages, listImages } = require("../controllers/upload");
-const { authUser } = require("../middlewares/auth");
+
+// Middleware for uploading images(posts)
 const imageUpload = require("../middlewares/imageUpload");
+// Middlewares for authentication
+const { authUser } = require("../middlewares/auth");
 
 const router = express.Router();
 

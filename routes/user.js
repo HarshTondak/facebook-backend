@@ -26,6 +26,8 @@ const {
   removeFromSearch,
   getFriendsPageInfos,
 } = require("../controllers/user");
+
+// Middleware for authentication
 const { authUser } = require("../middlewares/auth");
 
 const router = express.Router();

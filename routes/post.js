@@ -5,7 +5,10 @@ const {
   comment,
   savePost,
   deletePost,
+  getAllSavedPosts,
 } = require("../controllers/post");
+
+// Middleware for authentication
 const { authUser } = require("../middlewares/auth");
 
 const router = express.Router();
@@ -15,5 +18,6 @@ router.get("/getAllPosts", authUser, getAllPosts);
 router.put("/comment", authUser, comment);
 router.put("/savePost/:id", authUser, savePost);
 router.delete("/deletePost/:id", authUser, deletePost);
+router.get("/getAllSavedPosts", authUser, getAllSavedPosts);
 
 module.exports = router;
